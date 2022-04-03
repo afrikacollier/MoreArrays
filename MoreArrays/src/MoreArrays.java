@@ -9,19 +9,18 @@ public class MoreArrays {
 		return anArray;
 	}
 
-	public static void sumArray(int[] sumAnArray){
-		for(int item : sumAnArray){
+	public static int sumArray(int[] sumAnArray){
+		int sum = 0;
+		for(int item: sumAnArray) {
 			System.out.println(item);
+			sum = sum + item;
 		}
-		return;
+		System.out.println(sum);
+		return sum;
 	} 
 
 	public static void main(String[] args){
 			int[] anArray = toPower(4,3);
-			for(int item: anArray) {
-				System.out.println(item);
-				System.out.println(item += item);
-			}
+			MoreArrays.sumArray(anArray);
 	}
-
 }
